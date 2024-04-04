@@ -1,16 +1,24 @@
 '''Insira os nomes até escrever parar'''
 
 j=0
-candidatos = {
+'''candidatos = {
     'Candidato 1': 'e5_t10_p8_s8',
     'Candiddato 2': 'e10_t7_p7_s8',
     'Candidato 3': 'e8_t5_p4_s9',
     'Candidato 4': 'e2_t2_p2_s1',
     'Candidato 5': 'e10_t10_p8_s9'
-}
+}'''
+
+candidatos = [
+    ['candidato 1', 'e5_t10_p8_s8' ],
+    ['candidato 2', 'e10_t7_p7_s8'],
+    ['candidato 3', 'e8_t5_p4_s9'],
+    ['candidato 4', 'e2_t2_p2_s1'],
+    ['candidato 5', 'e10_t10_p8_s9']
+]
 
 '''O código comentado abaixo insere os candidatos com as notas dinamicamente'''
-'''while j==0:
+while j==0:
     i=0
     lista_de_notas = []
     candidato_atual = input('Insira o nome do candidato: ')
@@ -22,8 +30,8 @@ candidatos = {
             lista_de_notas.append(input('Insira a ' + str(i+1) + ' nota: '))
             i=i+1
         resultado = ('e' + str(lista_de_notas[0]) + '_' + 't' + str(lista_de_notas[1]) + '_' + 'p' + str(lista_de_notas[2]) + '_' + 's' + str(lista_de_notas[3]))
-        candidatos[candidato_atual] = resultado'''
-
+        candidatos.append([candidato_atual, resultado])
+print(candidatos)
 
 notas_minimas = []
 i=0
