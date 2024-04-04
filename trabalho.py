@@ -32,7 +32,6 @@ while j==0:
         resultado = ('e' + str(lista_de_notas[0]) + '_' + 't' + str(lista_de_notas[1]) + '_' + 'p' + str(lista_de_notas[2]) + '_' + 's' + str(lista_de_notas[3]))
         candidatos.append([candidato_atual, resultado])
 print(candidatos)
-
 notas_minimas = []
 i=0
 while i < 4:
@@ -53,9 +52,9 @@ lista_aprovados = []
 
 for candidato in candidatos:
     '''print(candidatos[candidato])'''
-    lista_atual = list(candidatos[candidato])
     i=0
     lista_nota_candidato = []
+    lista_atual = list(candidato[1])
     while i < len(lista_atual):
         nota_atualizada = ''
         if(i < len(lista_atual) - 1):
@@ -74,7 +73,7 @@ for candidato in candidatos:
             lista_nota_candidato.append(int(nota_atualizada))
             i=i+1
     if(lista_nota_candidato[0]>=notas_minimas[0] and lista_nota_candidato[1]>=notas_minimas[1] and lista_nota_candidato[2]>=notas_minimas[2] and lista_nota_candidato[3]>=notas_minimas[3]):
-        lista_aprovados.append(candidato)
+        lista_aprovados.append(candidato[0])
 
 '''print(lista_aprovados)'''
 
