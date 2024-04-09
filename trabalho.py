@@ -35,3 +35,12 @@ def adicionar_funcionario():
     resultado = input("Digite o resultado do novo funcionário no formato 'ex_tx_px_sx': ")
     candidatos.append({"nome": nome, "resultado": resultado})
     print(f"Funcionário {nome} adicionado com sucesso!")
+
+def excluir_funcionario():
+    nome = input("Digite o nome do funcionário que deseja excluir: ")
+    for candidato in candidatos:
+        if candidato["nome"] == nome:
+            candidatos.remove(candidato)
+            print(f"Funcionário {nome} excluído com sucesso!")
+            return
+    print(f"Funcionário {nome} não encontrado.")
