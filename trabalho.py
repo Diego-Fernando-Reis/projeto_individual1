@@ -1,4 +1,16 @@
-'''Insira os nomes até escrever parar'''
+def exibir_menu():
+    menu = """
+╔═════════════════════════════════════╗
+║           MENU DE OPÇÕES            ║
+╠═════════════════════════════════════╣
+║ 1. Buscar candidatos por critérios  ║
+║═════════════════════════════════════╣
+║ 2. Adicionar ou excluir funcionários║
+║═════════════════════════════════════╣
+║              3. Sair                ║
+╚═════════════════════════════════════╝
+"""
+    print(menu)
 
 j=0
 '''candidatos = {
