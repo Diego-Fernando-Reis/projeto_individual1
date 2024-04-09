@@ -12,14 +12,15 @@ def exibir_menu():
 """
     print(menu)
 
-j=0
-'''candidatos = {
-    'Candidato 1': 'e5_t10_p8_s8',
-    'Candiddato 2': 'e10_t7_p7_s8',
-    'Candidato 3': 'e8_t5_p4_s9',
-    'Candidato 4': 'e2_t2_p2_s1',
-    'Candidato 5': 'e10_t10_p8_s9'
-}'''
+def buscar_candidato_por_critérios(candidatos, nota_e, nota_t, nota_p, nota_s):
+    candidatos_encontrados = []
+    for candidato in candidatos:
+        resultado = candidato["resultado"]
+        e, t, p, s = resultado.split("_")
+        if int(e[1:]) >= nota_e and int(t[1:]) >= nota_t and int(p[1:]) >= nota_p and int(s[1:]) >= nota_s:
+            candidato_com_pontuacao = candidato["nome"] + " " + resultado
+            candidatos_encontrados.append(candidato_com_pontuacao)
+    return candidatos_encontrados
 
 candidatos = [
     ['candidato 1', 'e5_t10_p8_s8' ],
